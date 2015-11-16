@@ -1,21 +1,26 @@
 <?php
 $params = require(__DIR__ . '/params.php');
 $config = [
+    'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',  //确定vender的路径
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'defaultRoute' => 'admin',
+    'defaultRoute' => 'home',
+    'timeZone' => 'Asia/Shanghai',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'tkBfmaRwRj9FgQGEr7KA9CCa6gsfCSW6',
+            // Enable Yii Validate CSRF Token
+            'enableCookieValidation' => false,
+            'enableCsrfValidation' => false,
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+            'identityClass' => 'app\models\AppBlogUser',
+            'enableAutoLogin' => false,
         ],
         'errorHandler' => [
             //'errorAction' => 'site/error',
@@ -39,8 +44,8 @@ $config = [
         'db' => [
             'class' => 'yii\db\Connection',
             'dsn' => 'mysql:host=localhost;dbname=blog',
-            'username' => 'root',
-            'password' => 'Al147258',
+            'username' => 'kefu',
+            'password' => 'abcd1234',
             'charset' => 'utf8',
         ],
         'view' => [

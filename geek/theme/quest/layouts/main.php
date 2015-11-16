@@ -1,8 +1,6 @@
-<?php
-use \bower\markdown;
-$url = sprintf('%s%s/theme/%s/',Yii::$app->request->hostInfo,Yii::$app->request->baseUrl,Yii::$app->params['theme']); ?>
 <?php $this->beginPage() ?>
-<!DOCTYPE html>
+<?php $url = sprintf('%s%s/theme/%s/',Yii::$app->request->hostInfo,Yii::$app->request->baseUrl,Yii::$app->params['theme']); ?>
+    <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
