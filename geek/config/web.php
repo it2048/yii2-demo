@@ -15,13 +15,6 @@ $config = [
             'enableCookieValidation' => false,
             'enableCsrfValidation' => false,
         ],
-        'cache' => [
-            'class' => 'yii\caching\FileCache',
-        ],
-        'user' => [
-            'identityClass' => 'app\models\AppBlogUser',
-            'enableAutoLogin' => false,
-        ],
         'errorHandler' => [
             //'errorAction' => 'site/error',
         ],
@@ -47,15 +40,6 @@ $config = [
             'username' => 'kefu',
             'password' => 'abcd1234',
             'charset' => 'utf8',
-        ],
-        'view' => [
-            'theme' => [
-                'basePath' => '@app/theme/quest',
-                'baseUrl' => '@web',
-                'pathMap' => [
-                    '@app/views' => '@app/theme/quest',
-                ],
-            ],
         ]
     ],
     'params' => $params
